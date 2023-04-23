@@ -1,0 +1,37 @@
+.episodes-page {
+  padding: 20px 20px 60px 20px
+}
+
+.episode-time {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.episode-title {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.episode-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.episode-desc {
+  line-break: anywhere;
+}

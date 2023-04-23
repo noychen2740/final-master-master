@@ -1,0 +1,20 @@
+.thanks {
+    padding: 0 100px;
+  }
+  
+  .book-image {
+    width: 265px;
+    margin: 15px 0;
+    padding-top: 10px;
+  }
+  
+  .btns {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .btn{
+      margin: 15px !important;
+  }
+  
