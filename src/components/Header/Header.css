@@ -11,10 +11,13 @@ header {
       font-size: 0.875rem;
       letter-spacing: 0.01071em;
       text-align: center;
+      background-color: #598e89;
+      position: unset
 }
 
 .logo {
-  width: 120px;
+  width: 60px;
+  height: 60px;
 }
 
 .MuiSvgIcon-root {

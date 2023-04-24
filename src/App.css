@@ -43,6 +43,7 @@ body{
   width: 30%;
   max-width: 600px;
   margin-left: 80%;
+  background-image: none;
 }
 
 .App-headerDiv {
@@ -147,8 +148,6 @@ p {
      margin: 15px;
       letter-spacing: 0.01071em;
       text-align: center;
-  
-      
   }
   .seperator{
     margin-top: 28px;

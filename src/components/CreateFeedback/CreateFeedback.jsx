@@ -32,7 +32,7 @@ function CreateFeedback() {
             <label>כותרת</label>
             <br></br>
             <TextField name='FeedbackTitle' fullWidth id="fullWidth" cols='50'
-              rows='10' onInput={handleChange}
+              rows='2' onInput={handleChange}
               value={form?.FeedbackTitle} />
           </div>
           <div className='input-container'>
