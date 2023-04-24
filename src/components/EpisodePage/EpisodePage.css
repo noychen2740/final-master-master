@@ -1,5 +1,6 @@
 .episode-page .episode-content {
     margin-bottom: 15px;
+    width: 100%;
 
 }
 
@@ -8,7 +9,7 @@
 }
 
 
-.episode-desc{
+.episode-desc {
     padding: 30px;
 }
 
@@ -16,8 +17,6 @@
     margin-top: 15px;
 }
 
-.episode-page{
-    margin: 15px;
+.episode-page {
+    margin-top: 10px;
 }
-
-

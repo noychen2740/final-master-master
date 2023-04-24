@@ -4,6 +4,7 @@ body{
 }
 .App {
   text-align: center;
+
 }
 
 .App-content {
@@ -15,6 +16,7 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 25px;
+  
 }
 
 .App-link {
@@ -132,6 +134,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 
@@ -148,6 +151,7 @@ p {
      margin: 15px;
       letter-spacing: 0.01071em;
       text-align: center;
+      background-color: lightgray;
   }
   .seperator{
     margin-top: 28px;
@@ -162,7 +166,7 @@ p {
   
   @media (max-width:700px) {
     .container {
-      max-width: 320px;
+      max-width: 310px;
     }
   }
   

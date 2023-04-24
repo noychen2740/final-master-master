@@ -7,6 +7,8 @@ function Diary() {
 
   return (
     <div className='diary center'>
+      <br></br>
+      <br></br>
       <div className='title'>יומן המסע שלי</div>
       <div className='desc'>
         יומן מסע הינו כלי המאפשר לכם לתעד פרקים בטיול שלכם. בכל פרק תתארו את

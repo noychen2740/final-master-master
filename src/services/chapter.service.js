@@ -61,7 +61,8 @@ async function create(episode) {
 //api/traveldiary/Put/{nameofchapterfromdb}/
 async function update(episode) {
     try {
-        const res = await axios.put(`${base_url}/${module}/Put/${episode.NameOfChapter}/`, episode)
+        console.log({ episode });
+        const res = await axios.put(`${base_url}/${module}/PutUpdate/${episode.NameOfChapter}/`, episode)
         console.log({ res });
         return res.data
     } catch (err) {

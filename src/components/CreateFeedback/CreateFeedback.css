@@ -6,7 +6,7 @@
   text-align: center;
 }
 .input-container {
-  width: fit-content;
+  width: 100%;
   margin-bottom: 15px;
   display: flex;
   margin-left: 15px;
