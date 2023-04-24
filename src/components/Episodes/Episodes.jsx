@@ -3,6 +3,7 @@ import './Episodes.css';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { chapterService } from '../../services/chapter.service';
+import  jeep from '../../assets/jeep.jpg'
 function Episodes() {
   const navigate = useNavigate();
 
@@ -41,10 +42,10 @@ function Episodes() {
                 <div className='episode-hour'>{e.ChapterTime}</div>
               </div>
               <div className='episode-content'>
+              {/* <img className='episode-PIC' src={e.ChapterPictures} alt='' /> */}
+              <img className='episode-PIC' src={jeep} alt='' />
                 <div className='episode-title'>{e.NameOfChapter}</div>
                 <div className='episode-desc'>{e.ChapterDescription.length > 20 ? e.ChapterDescription.substring(0, 20) + '...' : e.ChapterDescription}</div>
-                <img src={e.ChapterPictures} alt='' />
-
                 <div className='btns'>
                   <Button
                     className='btn btn-edit'

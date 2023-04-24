@@ -1,6 +1,7 @@
 
 body{
   direction: rtl;
+  /* font-family: 'Courier' */
 }
 .App {
   text-align: center;
@@ -124,7 +125,6 @@ p {
   font-size: 25px;
   font-weight: bold;
   margin: 15px 0;
-  border-bottom: 1px solid;
 }
 
 
@@ -151,7 +151,8 @@ p {
      margin: 15px;
       letter-spacing: 0.01071em;
       text-align: center;
-      background-color: lightgray;
+      background-color: #f2f2f2;
+      
   }
   .seperator{
     margin-top: 28px;

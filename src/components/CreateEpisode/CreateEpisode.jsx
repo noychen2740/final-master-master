@@ -82,16 +82,17 @@ function CreateEpisode() {
             <label>תמונה</label>
             <input type='file'></input>
           </div>
-          <Button className='btn btn-create' type='file' variant="contained" onChange={handleChange}
-            value={form?.ChapterPictures} >העלה תמונה</Button>
           <Button
             className='btn btn-create'
             variant='contained'
             onClick={submit}
           >
-            שמור
+             שמור פרק
           </Button>
-          
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
         </form>
       </div>
     </div>
