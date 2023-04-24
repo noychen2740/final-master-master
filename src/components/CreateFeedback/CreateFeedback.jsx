@@ -20,7 +20,7 @@ function CreateFeedback() {
   const handleChange = (ev) => {
     let { name, value } = ev.target;
 
-    setForm({ ...form, [name]: value });
+    setForm({ ...form, [name]: value }); 
   };
 
   return (
