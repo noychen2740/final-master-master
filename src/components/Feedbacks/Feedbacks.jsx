@@ -2,8 +2,16 @@ import React, { useEffect, useState } from 'react';
 import './Feedbacks.css';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
-import { chapterService } from '../../services/chapter.service';
 import { feedbackService } from '../../services/feedback.service';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import  jeep from '../../assets/jeep.jpg'
+
+
+
 function Feedbacks() {
   const navigate = useNavigate();
 
@@ -13,11 +21,11 @@ function Feedbacks() {
     loadFeedbacks();
   }, []);
 
-  const remove = async (id) => {
-    console.log({ id });
-    await feedbackService.remove(id);
-    loadFeedbacks();
-  };
+  // const remove = async (id) => {
+  //   console.log({ id });
+  //   await feedbackService.remove(id);
+  //   loadFeedbacks();
+  // };
 
   const getById = (FeedbackKey) => {
     console.log({ FeedbackKey });
@@ -33,37 +41,36 @@ function Feedbacks() {
     <div className='feedbacks-page center'>
       <div className='title'>  פידבקים מהמשתמשים</div>
       <div className='feedbacks'>
-        {feedbacks.map((f) => {
-          return (
-            <div className='feedback'>
-
-              <div className='feedback-content'>
-                <div className="card">
-                  <h1 className='Feedback-title2'>{f.FeedbackTitle}</h1>
-                  <div className='btns'>
-                    <Button
-                      className='btn btn-edit'
-                      variant='contained'
-                      onClick={() => getById(f.FeedbackKey)}
-                    >
-                      תצוגה
-                    </Button>
-
-                    <Button
-                      className='btn btn-edit'
-                      variant='contained'
-                      onClick={() => remove(f.FeedbackKey)}
-                    >
-                      מחיקה
-                    </Button>
-                  </div>
-                </div>
-
-              </div>
+        {feedbacks.map((f) => (
+          <div className='feedback'>
+            <div className='feedback-content'>
+            <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    src={jeep} />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                    <h1 className='Feedback-title2'>{f.FeedbackTitle}</h1>
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                    <h1 className='Feedback-title2'>{f.FeedbackDescription}</h1>
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button onClick={() => getById(f.FeedbackKey)} size="small">הצגת פידבק </Button>
+                    {/* <Button onClick={() => remove(f.FeedbackKey)} size="small">מחיקת פידבק </Button> */}
+                  </CardActions>
+                </Card>
+                <br></br>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   );
 }

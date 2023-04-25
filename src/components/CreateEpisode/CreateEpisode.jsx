@@ -43,7 +43,7 @@ function CreateEpisode() {
   return (
     <div className='create-episode'>
       <div className='container center'>
-        <div className='title'>יצירת פרק חדש</div>
+        <div className='title'>יצירת/עדכון פרק חדש</div>
         <form onSubmit={submit} >
           <div className='input-container'>
             <label>כותרת</label>

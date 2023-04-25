@@ -27,7 +27,7 @@ function CreateFeedback() {
     <div className='create-episode'>
       <div className='container center'>
         <div className='title'>  יצירת פידבק</div>
-        <form onSubmit={submit}>
+        <form onSubmit={submit}>       
           <div className='input-container'>
             <label>כותרת</label>
             <br></br>
