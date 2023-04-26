@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Diary from './components/Diary/Diary';
-import Header from './components/Header/Header';
 import Episodes from './components/Episodes/Episodes';
 import CreateEpisode from './components/CreateEpisode/CreateEpisode';
 import EpisodePage from './components/EpisodePage/EpisodePage';
@@ -16,7 +15,6 @@ function App() {
     <div className="App">
 
       <Routes>
-        <Route path="/" element={<Header />}>
           <Route path='diary' element={<Diary />} />
           <Route path='episodes' element={<Episodes />} />
           <Route path='thanks' element={<ThanksPage />} />
@@ -27,7 +25,6 @@ function App() {
           <Route path='create-episode/:NameOfChapter' element={<CreateEpisode />} />
           <Route path='create-episode' element={<CreateEpisode />} />
           <Route path='episode/:NameOfChapter' element={<EpisodePage />} />
-        </Route>
       </Routes>
     </div>
   );

@@ -9,6 +9,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import TopOfAplication from '../TopOfAplication';
+import Navigation from '../Navigation';
 
 
 
@@ -40,7 +42,12 @@ function Episodes() {
 
   return (
     <div className='episodes-page center'>
-      <div className='title'>יומן המסע שלי</div>
+      <TopOfAplication label='הפרקים שלי'  />
+      {/* <div className='title'>יומן המסע שלי</div> */}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <div className='episodes'>
         {episodes.map((e) => {
           return (
@@ -78,6 +85,7 @@ function Episodes() {
       </div>
       <br></br>
       <br></br>
+      <Navigation></Navigation>
     </div>
   );
 }

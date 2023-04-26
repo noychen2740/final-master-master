@@ -8,7 +8,10 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import  jeep from '../../assets/jeep.jpg'
+import  jeep from '../../assets/jeep.jpg';
+import TopOfAplication from '../TopOfAplication';
+import Navigation from '../Navigation';
+
 
 
 function FeedbackPage() {
@@ -41,6 +44,12 @@ function FeedbackPage() {
   }
   return feedback ? (
     <div className='feedbackpage'>
+      <TopOfAplication label={feedback.FeedbackTitle}  />
+      {/* <div className='title'>יומן המסע שלי</div> */}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <Card sx={{ maxWidth: 345 }}>
                   {/* <CardMedia
                     component="img"
@@ -67,6 +76,7 @@ function FeedbackPage() {
                     <Button onClick={() => remove(feedback.FeedbackKey)} size="small">מחיקת פידבק </Button>
                   </CardActions>
                 </Card>
+                <Navigation></Navigation>
     </div>
   ) : <div className="loading">
     loading...

@@ -8,7 +8,9 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import  jeep from '../../assets/jeep.jpg'
+import  jeep from '../../assets/jeep.jpg';
+import TopOfAplication from '../TopOfAplication';
+import Navigation from '../Navigation';
 
 
 
@@ -39,7 +41,13 @@ function Feedbacks() {
 
   return (
     <div className='feedbacks-page center'>
-      <div className='title'>  פידבקים מהמשתמשים</div>
+      <TopOfAplication label='פיידבקים מהמשתמשים'  />
+      {/* <div className='title'>יומן המסע שלי</div> */}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <div className='feedbacks'>
         {feedbacks.map((f) => (
           <div className='feedback'>
@@ -71,6 +79,7 @@ function Feedbacks() {
       <br></br>
       <br></br>
       <br></br>
+      <Navigation></Navigation>
     </div>
   );
 }

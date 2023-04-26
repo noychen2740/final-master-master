@@ -3,13 +3,21 @@ import './ThanksPage.css'
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import  manthanks from '../../assets/manthanks.png'
-import  thanks from '../../assets/thanks.png'
+import  thanks from '../../assets/thanks.png';
+import TopOfAplication from '../TopOfAplication';
+import Navigation from '../Navigation';
 function ThanksPage() {
     const navigate = useNavigate();
   return (
     <div>
         <div className='thanks center'>
-      <div className='title'>תודה רבה !</div>
+        <TopOfAplication label='תודה רבה!'  />
+      {/* <div className='title'>יומן המסע שלי</div> */}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <img className='book-image' src={manthanks}></img>
       <div className='desc'>
         הצוות שלנו בודק את הצעתכם... נחזור בקרוב עם תשובה
@@ -20,7 +28,11 @@ function ThanksPage() {
           variant='contained'
           onClick={() => navigate('/create-feedback')}
         >חזרה ליצירת פיידבק</Button>
+        <br></br>
+        <br></br>
+        <br></br>
     </div>
+    <Navigation></Navigation>
     </div>
   )
 }

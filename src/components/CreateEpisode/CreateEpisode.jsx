@@ -6,6 +6,8 @@ import { chapterService } from '../../services/chapter.service';
 import { useNavigate } from 'react-router-dom';
 import { TextField } from '@mui/material';
 import { Card } from '@mui/material';
+import TopOfAplication from '../TopOfAplication';
+import Navigation from '../Navigation';
 
 function CreateEpisode() {
   const [form, setForm] = useState();
@@ -42,8 +44,14 @@ function CreateEpisode() {
   };
   return (
     <div className='create-episode'>
+      
       <div className='container center'>
-        <div className='title'>יצירת/עדכון פרק חדש</div>
+      <TopOfAplication label='יצירת/עדכון פרק חדש'  />
+      {/* <div className='title'>יומן המסע שלי</div> */}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
         <form onSubmit={submit} >
           <div className='input-container'>
             <label>כותרת</label>
@@ -74,8 +82,8 @@ function CreateEpisode() {
           <div className='input-container'>
             <label>תיאור</label>
             <br></br>
-            <TextField name='ChapterDescription' fullWidth  id="fullWidth" cols='50'
-              rows='10' onInput={handleChange}
+            <TextField name='ChapterDescription' fullWidth  id="fullWidth" cols='50'  multiline={true} 
+              rows='3' onInput={handleChange}
               value={form?.ChapterDescription} />
           </div>
           <div className='input-container'>
@@ -95,6 +103,7 @@ function CreateEpisode() {
           <br></br>
         </form>
       </div>
+      <Navigation></Navigation>
     </div>
   );
 }

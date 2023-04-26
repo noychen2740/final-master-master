@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { feedbackService } from '../../services/feedback.service';
 import { TextField } from '@mui/material';
+import TopOfAplication from '../TopOfAplication';
+import Navigation from '../Navigation';
+
 
 function CreateFeedback() {
   const [form, setForm] = useState();
@@ -26,7 +29,12 @@ function CreateFeedback() {
   return (
     <div className='create-episode'>
       <div className='container center'>
-        <div className='title'>  יצירת פידבק</div>
+      <TopOfAplication label='יצירת פיידבק חדש'  />
+      {/* <div className='title'>יומן המסע שלי</div> */}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
         <form onSubmit={submit}>       
           <div className='input-container'>
             <label>כותרת</label>
@@ -39,7 +47,7 @@ function CreateFeedback() {
             <label>תיאור</label>
             <br></br>
             <TextField name='FeedbackDescription' fullWidth id="fullWidth" cols='50'
-              rows='2' onInput={handleChange}    multiline={true} 
+              rows='3' onInput={handleChange}    multiline={true} 
               value={form?.FeedbackDescription} />
           </div>
           <div className='input-container'>
@@ -104,6 +112,7 @@ function CreateFeedback() {
           <br></br>
         </form>
       </div>
+      <Navigation></Navigation>
     </div>
   );
 }
