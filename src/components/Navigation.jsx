@@ -18,7 +18,7 @@ import { AccountCircle, CurrencyExchange, Home, TravelExplore } from '@mui/icons
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 
-export default function Navigation(props) {
+export default function Navigation(props) { //נאב בר של עומר
   
   // const [pageNav, setPageNav] = useState('');
  

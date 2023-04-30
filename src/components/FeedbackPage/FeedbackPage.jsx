@@ -19,30 +19,30 @@ function FeedbackPage() {
   const { FeedbackKey } = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useEffect(() => { //טעינה של הפיידבק הספציפי לפי הקיי
     if (FeedbackKey) {
       loadFeedback();
     }
   }, []);
 
-  const loadFeedback = async () => {
+  const loadFeedback = async () => {  //טעינה של הפיידבק הספציפי לפי הקיי
     const data = await feedbackService.getById(FeedbackKey);
     setFeedback(data);
   };
 
-  const remove = async (id) => {
+  const remove = async (id) => { //מחיקה של הפיידבק הספציפי לפי הקיי
     console.log({ id });
     await feedbackService.remove(feedback.FeedbackKey);
     navigate('/feedbacks')
   };
 
-  const submit = async () => {
+  const submit = async () => { //הוספה של הפיידבק הספציפי לפי הקיי
     console.log();
     const res = await feedbackService.create(feedback)
   await  feedbackService.remove(feedback.FeedbackKey)
     navigate('/feedbacks')
   }
-  return feedback ? (
+  return feedback ? ( //תצוגה של הפידבק הספציפי על המסך
     <div className='feedbackpage'>
       <TopOfAplication label={feedback.FeedbackTitle}  />
       {/* <div className='title'>יומן המסע שלי</div> */}

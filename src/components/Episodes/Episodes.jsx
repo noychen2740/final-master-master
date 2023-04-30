@@ -19,28 +19,28 @@ function Episodes() {
 
   const [episodes, setEpisodes] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => { //טעינה של כל הפרקים
     loadEpisodes();
   }, []);
 
-  const remove = async (id) => {
+  const remove = async (id) => { //אפשרות למחיקת פרק לפי האי די שלו
     console.log({ id });
     await chapterService.remove(id);
     loadEpisodes();
   };
 
-  const edit = (id) => {
+  const edit = (id) => { //אפשרות לעריכה פרק לפי האי די שלו
     console.log({ id });
     navigate(`/create-episode/${id}`);
   };
 
-  const loadEpisodes = async () => {
+  const loadEpisodes = async () => { //טעינת כל הפרקים הקיימים
     const res = await chapterService.getAll();
 
     setEpisodes(res);
   };
 
-  return (
+  return ( //תצוגת הפרקים במסך
     <div className='episodes-page center'>
       <TopOfAplication label='הפרקים שלי'  />
       {/* <div className='title'>יומן המסע שלי</div> */}

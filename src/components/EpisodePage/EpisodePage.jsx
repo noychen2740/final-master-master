@@ -20,17 +20,17 @@ function EpisodePage() {
   const navigate = useNavigate();
   
 
-  useEffect(() => {
+  useEffect(() => { //עמוד הפרק הספציפי
     if (NameOfChapter) {
       loadEpisode();
     }
   }, []);
 
-  const loadEpisode = async () => {
+  const loadEpisode = async () => { //טוען את הפרק הספציפי לפי שם הפרק
     const data = await chapterService.getById(NameOfChapter);
     setEpisode(data);
   };
-  return episode ? (
+  return episode ? ( //תצוגת הפרק עצמו
     <div className='episode-page  center'>
       <TopOfAplication label={NameOfChapter}  />
       {/* <div className='title'>יומן המסע שלי</div> */}

@@ -13,7 +13,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate } from 'react-router-dom';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-function TopOfAplication(props) {
+function TopOfAplication(props) { //כותרת האפליקציה של עומר
     const navigate = useNavigate();
   const location = useLocation();
   return (

@@ -8,7 +8,7 @@ import TopOfAplication from '../TopOfAplication';
 import Navigation from '../Navigation';
 function ThanksPage() {
     const navigate = useNavigate();
-  return (
+  return ( //דף תודה רבה לאחר הוספת פיידבק מהמשתמש
     <div>
         <div className='thanks center'>
         <TopOfAplication label='תודה רבה!'  />

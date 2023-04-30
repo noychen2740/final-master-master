@@ -19,7 +19,7 @@ function Feedbacks() {
 
   const [feedbacks, setFeedbacks] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => { //תצוגה של כל הפיידבקים
     loadFeedbacks();
   }, []);
 
@@ -29,17 +29,17 @@ function Feedbacks() {
   //   loadFeedbacks();
   // };
 
-  const getById = (FeedbackKey) => {
+  const getById = (FeedbackKey) => { //תצוגה של כל הפיידבק לפי לחיצה על הכתפור והצגתו במסך הבא לפי הקיי
     console.log({ FeedbackKey });
     navigate(`/feedback/${FeedbackKey}`);
   };
 
-  const loadFeedbacks = async () => {
+  const loadFeedbacks = async () => { //תצוגה של כל הפיידבקים
     const res = await feedbackService.getAll();
     setFeedbacks(res);
   };
 
-  return (
+  return ( //תצוגה של הפיידבקים על המסך לפי הסדר
     <div className='feedbacks-page center'>
       <TopOfAplication label='פיידבקים מהמשתמשים'  />
       {/* <div className='title'>יומן המסע שלי</div> */}
@@ -49,7 +49,7 @@ function Feedbacks() {
       <br></br>
       <br></br>
       <div className='feedbacks'>
-        {feedbacks.map((f) => (
+        {feedbacks.map((f) => ( //תצוגה של הפיידבקים על המסך לפי map
           <div className='feedback'>
             <div className='feedback-content'>
             <Card sx={{ maxWidth: 345 }}>

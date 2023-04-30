@@ -5,7 +5,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate } from 'react-router-dom';
 import LOGO2 from '../../assets/LOGO2.png'
 import Navigation from '../Navigation'
-function Header() {
+function Header() { //לא בשימוש לא להעתיק את הקומפוננטה הזו, אני מפחדת למחוק אותה פשוט
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location.pathname);

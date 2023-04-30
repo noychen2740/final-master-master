@@ -14,19 +14,19 @@ function CreateFeedback() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const submit = async (ev) => {
+  const submit = async (ev) => { //לאחר ההוספה של הפרק העמוד מובל לעמוד תודה למשתמש
     ev.preventDefault();
     const res = await feedbackService.createfromuser(form);
     navigate('/thanks');
   };
 
-  const handleChange = (ev) => {
+  const handleChange = (ev) => { //לוקח את הפרמטרים מהטופס לדאטה בייס
     let { name, value } = ev.target;
 
     setForm({ ...form, [name]: value }); 
   };
 
-  return (
+  return ( //יצירה של הפידבק
     <div className='create-episode'>
       <div className='container center'>
       <TopOfAplication label='יצירת פיידבק חדש'  />

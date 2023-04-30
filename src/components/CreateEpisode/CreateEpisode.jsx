@@ -14,7 +14,7 @@ function CreateEpisode() {
   const { NameOfChapter } = useParams();
   const navigate = useNavigate();
 
-  const submit = async (ev) => {
+  const submit = async (ev) => { //ממיר את התאריך לפורמט המתאים בדאטה בייס
     ev.preventDefault();
     console.log({ form });
     form.ChapterDate = new Date(form.ChapterDate).toLocaleDateString('en-us')
@@ -26,13 +26,13 @@ function CreateEpisode() {
     navigate('/episodes');
   };
 
-  const handleChange = (ev) => {
+  const handleChange = (ev) => { //לוקח את הפרמטרים ש/מזינים בפורם
     let { name, value } = ev.target;
 
     setForm({ ...form, [name]: value });
   };
 
-  useEffect(() => {
+  useEffect(() => { //טוען את הפרק לאחר ההוספה
     if (NameOfChapter) {
       loadEpisode();
     }
@@ -42,7 +42,7 @@ function CreateEpisode() {
     const data = await chapterService.getById(NameOfChapter);
     setForm(data);
   };
-  return (
+  return ( //היצירה של הפרק מבחינה ויזואלית
     <div className='create-episode'>
       
       <div className='container center'>

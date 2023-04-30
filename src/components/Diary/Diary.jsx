@@ -8,7 +8,7 @@ import Navigation from '../Navigation';
 function Diary() {
   const navigate = useNavigate();
 
-  return (
+  return ( //עמוד הפתיחה של היומן מסע
     <div className='diary center'>
       <br></br>
       <br></br>
